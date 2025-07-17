@@ -4,37 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Te lo Vendo - Inicio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <div class="menu">
-    <header class="header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <div class="header__branding">
-                <a href="index.html" class="branding__link">
-                    <img class="logo" src="./assets/img/tlv-logo.png" alt="Logo Te lo Vendo">
-                </a>
+            <a class="navbar-brand" href="index.html">
+                <img src="./assets/img/tlv-logo.png" alt="Logo Te lo Vendo" height="40">
+            </a>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="catalogue.html">Catálogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about-us.html">Acerca de</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contacto</a>
+                    </li>
+                </ul>
             </div>
         </div>
-        <nav class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item nav__item--current"><a href="index.html" class="nav__link">Inicio</a></li>
-                    <li class="nav__item"><a href="catalogue.html" class="nav__link">Catálogo</a></li>
-                    <li class="nav__item"><a href="about-us.html" class="nav__link">Acerca de</a></li>
-                    <li class="nav__item"><a href="contact.html" class="nav__link">Contacto</a></li>
-                </ul>
-            </nav>
-    </header>
-    </div>
+    </nav>
 
     <main class="main">
         <section class="hero">
             <div class="container">
-                <h2 class="hero__title">Bienvenido a Te lo Vendo</h2>
-                <p class="hero__text">Todo para tu hogar en un solo lugar</p>
-                <a href="catalogue.html" class="btn btn--primary btn--large">Ver catálogo</a>
+                <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="d-flex flex-column justify-content-center align-items-center h-100">
+                                <h2 class="hero__title">Bienvenido a Te lo Vendo</h2>
+                                <p class="hero__text">Todo para tu hogar en un solo lugar</p>
+                                <a href="catalogue.html" class="btn btn-primary btn-lg">Ver catálogo</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex flex-column justify-content-center align-items-center h-100">
+                                <h2 class="hero__title">Ofertas Especiales</h2>
+                                <p class="hero__text">Descubre nuestras mejores promociones</p>
+                                <a href="catalogue.html" class="btn btn-primary btn-lg">Ver ofertas</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex flex-column justify-content-center align-items-center h-100">
+                                <h2 class="hero__title">Novedades</h2>
+                                <p class="hero__text">Productos recién llegados</p>
+                                <a href="catalogue.html" class="btn btn-primary btn-lg">Ver novedades</a>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
         </section>
         <section class="presentation">
@@ -159,6 +197,7 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>
 </html>
