@@ -1,0 +1,79 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+@use '../base/utilities';
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff; /* Asegura fondo visible */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+}
+
+.main {
+    margin-top: 300px;
+}
+
+.header__branding {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+
+    .branding__link {
+        display: block;
+    }
+
+    .logo {
+        width: 300px;
+        height: auto;
+        margin-top: 30px;
+        display: block;
+    }
+}
+
+
+.nav {
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        position: relative;
+    }
+
+    &__link {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1rem;
+        transition: color 0.3s ease;
+    }
+
+    &__link:hover,
+    &__item--current &__link {
+        color: var(--secondary-color);
+    }
+
+    &--current::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 100%;
+        height: 2px;
+        background-color: var(--secondary-color);
+    }
+}

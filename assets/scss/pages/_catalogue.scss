@@ -1,0 +1,67 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+@use '../base/reset';
+@use '../components/product-cards';
+
+
+/* Catalog */
+
+.page-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 2.5rem;
+    padding-top: 1rem;
+}
+
+/* Category Section */
+.category-section {
+    margin-bottom: 3rem;
+
+
+    &__title {
+        font-size: 2rem;
+        color: var(--primary-color);
+        text-align: center;
+        margin-bottom: 2rem;
+        position: relative;
+        padding-bottom: 0.5rem;
+    }
+
+    &__title::after {
+        content: '';
+        display: block;
+        width: 20%;
+        height: 2px;
+        background-color: var(--highlight-color);
+        margin: 0.5rem auto 0;
+        border-radius: 2px;
+    }
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    justify-items: center;
+}
+
+/* Responsive Grid Columns */
+@media (min-width: 576px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
