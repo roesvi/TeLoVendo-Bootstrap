@@ -31,11 +31,9 @@ $theme-colors: (
 @use 'components/feature'; 
 @use 'components/icons'; 
 @use 'components/button';
-@use 'components/card';    
-@use 'components/product-cards';
-@use 'components/modal';
+@use 'components/card';  
+@use 'components/products-cards';
 
 // Páginas
-@use 'pages/catalogue';
 @use 'pages/about-us'; 
 @use 'pages/contact'; 

@@ -1,38 +1,33 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const modal = document.getElementById("productModal");
+
+    const productModalElement = document.getElementById("productModal");
+    const productModal = new bootstrap.Modal(productModalElement);
+
     const modalImage = document.getElementById("modalImage");
     const modalTitle = document.getElementById("modalTitle");
+    const modalDescription = document.getElementById("modalDescription");
     const modalPrice = document.getElementById("modalPrice");
-    const closeModal = document.querySelector(".modal__close");
 
-    document.querySelectorAll(".product-card").forEach(card => {
-        const button = card.querySelector(".product-card__button");
+    const detailButtons = document.querySelectorAll(".btn.btn-primary[data-bs-toggle='modal']");
 
-        button.addEventListener("click", (e) => {
-            e.stopPropagation(); // evita que se dispare otro evento del contenedor si existe
+    detailButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const card = button.closest(".card");
 
-            const img = card.querySelector("img").src;
-            const title = card.querySelector(".product-card__title").textContent;
-            const description = card.querySelector(".product-card__description").textContent;
-            modalDescription.textContent = description;
-            const price = card.querySelector(".product-card__price").textContent;
+            if (card) {
+                const img = card.querySelector(".card-img-top").src;
+                const title = card.querySelector(".card-title").textContent;
+                const description = card.querySelector(".product-card__description").textContent;
+                const price = card.querySelector(".card-text.fw-bold.fs-5").textContent;
 
-            modalImage.src = img;
-            modalTitle.textContent = title;
-            modalPrice.textContent = price;
 
-            modal.style.display = "block";
+                modalImage.src = img;
+                modalTitle.textContent = title;
+                modalDescription.textContent = description;
+                modalPrice.textContent = price;
+
+                productModal.show();
+            }
         });
-    });
-
-
-    closeModal.addEventListener("click", () => {
-        modal.style.display = "none";
-    });
-
-    window.addEventListener("click", (e) => {
-        if (e.target === modal) {
-            modal.style.display = "none";
-        }
     });
 });
