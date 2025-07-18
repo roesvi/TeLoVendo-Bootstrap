@@ -42,21 +42,21 @@
             <div class="container">
                 <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
+                        <div class="carousel-item active" style="background-image: url('./assets/img/carousel/welcome.jpg'); background-size: cover; background-position: center;">
                             <div class="d-flex flex-column justify-content-center align-items-center h-100">
                                 <h2 class="hero__title">Bienvenido a Te lo Vendo</h2>
                                 <p class="hero__text">Todo para tu hogar en un solo lugar</p>
                                 <a href="catalogue.html" class="btn btn-primary btn-lg">Ver catálogo</a>
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item" style="background-image: url('./assets/img/carousel/offers.jpg'); background-size: cover; background-position: center;">
                             <div class="d-flex flex-column justify-content-center align-items-center h-100">
                                 <h2 class="hero__title">Ofertas Especiales</h2>
                                 <p class="hero__text">Descubre nuestras mejores promociones</p>
                                 <a href="catalogue.html" class="btn btn-primary btn-lg">Ver ofertas</a>
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item" style="background-image: url('./assets/img/carousel/new-arrivals.jpg'); background-size: cover; background-position: center;">
                             <div class="d-flex flex-column justify-content-center align-items-center h-100">
                                 <h2 class="hero__title">Novedades</h2>
                                 <p class="hero__text">Productos recién llegados</p>
@@ -164,34 +164,45 @@
         </a>
     </div>
 
-    <footer class="footer">
+    <footer class="footer bg-dark text-light py-5">
         <div class="container">
-            <div class="footer__content">
-                <div class="footer__brand">
-                    <p class="footer__slogan">Los mejores productos al mejor precio</p>
+            <div class="row footer__content mb-4">
+                <div class="col-md- footer__brand mb-3 mb-md-0">
+                    <p class="footer__slogan lead text-white">Los mejores productos al mejor precio</p>
                 </div>
-                <div class="footer__links">
-                    <h3 class="footer__title">Enlaces rápidos</h3>
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="catalogue.html">Catálogo</a></li>
-                        <li><a href="about-us.html">Acerca de</a></li>
-                        <li><a href="contact.html">Contacto</a></li>
+
+                <div class="col-md- footer__links mb-3 mb-md-0">
+                    <h3 class="footer__title h5 text-white mb-3">Enlaces rápidos</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white text-decoration-none">Inicio</a></li>
+                        <li><a href="catalogue.html" class="text-white text-decoration-none">Catálogo</a></li>
+                        <li><a href="about-us.html" class="text-white text-decoration-none">Acerca de</a></li>
+                        <li><a href="contact.html" class="text-white text-decoration-none">Contacto</a></li>
                     </ul>
                 </div>
-                <div class="footer__contact">
-                    <h3 class="footer__title">Contacto</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Av. Principal 123, Santiago</p>
-                    <p><i class="fas fa-phone"></i> +56 9 1234 5678</p>
-                    <p><i class="fas fa-envelope"></i> contacto@telovendo.cl</p>
+
+                <div class="col-md- footer__contact">
+                    <h3 class="footer__title h5 text-white mb-3">Contacto</h3>
+                    <p class="text-white mb-1"><i class="fas fa-map-marker-alt me-2"></i> Av. Principal 123, Santiago
+                    </p>
+                    <p class="text-white mb-1"><i class="fas fa-phone me-2"></i> +56 9 1234 5678</p>
+                    <p class="text-white mb-1"><i class="fas fa-envelope me-2"></i> contacto@telovendo.cl</p>
                 </div>
             </div>
-            <div class="footer__bottom">
-                <p class="footer__copyright">&copy; 2025 Te lo Vendo. Todos los derechos reservados.</p>
-                <div class="footer__social">
-                    <a href="#" class="social__link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social__link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social__link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+
+            <div class="row footer__bottom pt-3 border-top border-secondary">
+                <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                    <p class="footer__copyright mb-0">&copy; 2025 Te lo Vendo. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="footer__social d-flex justify-content-center justify-content-md-end">
+                        <a href="#" class="social__link text-white fs-4 me-3" aria-label="Facebook"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social__link text-white fs-4 me-3" aria-label="Instagram"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#" class="social__link text-white fs-4" aria-label="Twitter"><i
+                                class="fab fa-twitter"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
